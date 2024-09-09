@@ -1,0 +1,31 @@
+.main-visual-swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+  background-color: #fff;
+}
+.main-visual-swiper
+  .swiper-horizontal
+  > .swiper-pagination-bullets
+  .swiper-pagination-bullet,
+.main-visual-swiper
+  .swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  margin: 0 5px;
+}
+.main-visual-swiper .swiper-horizontal > .swiper-pagination-bullets,
+.main-visual-swiper .swiper-pagination-bullets.swiper-pagination-horizontal,
+.main-visual-swiper .swiper-pagination-custom,
+.main-visual-swiper .swiper-pagination-fraction {
+  bottom: 30px;
+}
+.main-visual-swiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  width: 42px;
+  border-radius: 5px;
+  background-color: var(--color-primary);
+  transition: 0.4s ease;
+}
+.main-wrap .product-swiper .swiper-wrapper {
+  margin-top: 50px;
+  padding-bottom: 32px;
+}

@@ -1,0 +1,118 @@
+@charset "UTF-8";
+
+:root {
+  --color-border-box: #ccc;
+  --color-border-layout: #ddd;
+  --color-primary: #f46700;
+}
+
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.text-center {
+  text-align: center;
+}
+
+html,
+body,
+* {
+  font-family: "Pretendard", sans-serif;
+}
+
+body {
+  letter-spacing: -0.025em;
+  min-width: 320px;
+  color: #222;
+  height: 100%;
+}
+
+.wrap {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.inner {
+  max-width: 1700px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox  */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* 전체 공통 animation */
+[class*="default-ani"] > *,
+[class*="default-ani"] .title {
+  opacity: 0;
+  -webkit-transform: translateY(100px);
+  transform: translateY(100px);
+  -webkit-transition: opacity 0.75s, -webkit-transform 0.75s;
+  transition: opacity 0.75s, -webkit-transform 0.75s;
+  transition: opacity 0.75s, transform 0.75s;
+  transition: opacity 0.75s, transform 0.75s, -webkit-transform 0.75s;
+  -webkit-transition-delay: 0.25s;
+  transition-delay: 0.25s;
+}
+
+[class*="default-ani"] :not(.title) {
+  transition-delay: 0.25s;
+}
+
+[class*="default-ani"].active > *,
+[class*="default-ani"].active .title {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+/* slide 공통 애니메이션*/
+[class*="slide-ani"] .product-swiper .swiper-wrapper {
+  -webkit-transform: translateX(150%);
+  transform: translateX(150%);
+  -webkit-transition: opacity 0.75s, -webkit-transform 1s;
+  transition: opacity 0.75s, -webkit-transform 1s;
+  transition: opacity 0.75s, transform 1s;
+  transition: opacity 0.75s, transform 1s, -webkit-transform 1s;
+}
+[class*="slide-ani"].active .product-swiper .swiper-wrapper {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+/* 서브페이지 메인 타이틀 효과 */
+[class*="main-title"] {
+  opacity: 0;
+  transform: translateX(0);
+  animation: mainTextAnimation 1s 0.5s both;
+}
+
+@keyframes mainTextAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(30px);
+  }
+}

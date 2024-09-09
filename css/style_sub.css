@@ -1,0 +1,189 @@
+@charset "UTF-8";
+
+@import url("reset.css");
+@import url("layout.css");
+@import url("font.css");
+
+main {
+  padding-top: 120px;
+}
+
+/* ==========================================================================
+   sub - intro
+   ========================================================================== */
+.intro {
+  position: relative;
+  padding: 111px 0;
+  text-align: center;
+}
+.intro .bg {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../images/bg/bg-intro-product.png") no-repeat center center /
+    100% 100%;
+  animation: subIntroImageAnimation 2s;
+}
+.intro .text-box {
+  opacity: 0;
+  -webkit-transform: translateY(100px);
+  transform: translateY(100px);
+  animation: subIntroTextAnimation 0.75s 0.25s forwards;
+}
+@keyframes subIntroImageAnimation {
+  0% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes subIntroTextAnimation {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+    -webkit-transition: opacity 0.75s, -webkit-transform 0.75s;
+    transition: opacity 0.75s, -webkit-transform 0.75s;
+    transition: opacity 0.75s, transform 0.75s;
+    transition: opacity 0.75s, transform 0.75s, -webkit-transform 0.75s;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+.intro .title {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.56px;
+  color: #fff;
+}
+.intro .desc {
+  margin-top: 12px;
+  font-size: 24px;
+  line-height: 1.21;
+  color: #bcbcbc;
+}
+/* ==========================================================================
+   sub - breadcrumb
+   ========================================================================== */
+.breadcrumb {
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid var(--color-border-layout);
+  background-color: #fff;
+  -webkit-transition: transform 0.1s;
+  transition: transform 0.1s;
+}
+.breadcrumb-box {
+  display: flex;
+  align-items: center;
+  border-left: 1px solid var(--color-border-layout);
+}
+.breadcrumb .icon-home {
+  width: 60px;
+  height: 60px;
+  background: url("../images/icon/icon-bread-home.png") no-repeat center center /
+    22px 20px;
+}
+.breadcrumb .sub-depth {
+  position: relative;
+}
+.breadcrumb .sub-depth1 {
+  border: 1px solid var(--color-border-layout);
+  border-top: none;
+  border-bottom: none;
+  cursor: initial;
+}
+.breadcrumb .sub-depth .current {
+  position: relative;
+  width: 220px;
+  height: 60px;
+  padding: 20px 36px 19px 20px;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: -0.45px;
+  text-align: left;
+  color: #333;
+  cursor: pointer;
+}
+.breadcrumb .sub-depth .current::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  right: 16px;
+  width: 20px;
+  height: 20px;
+  background: url("../images/icon/icon-dropdown.png") no-repeat center center /
+    100% 100%;
+  transition: 0.2s;
+}
+.breadcrumb .sub-depth.active .current::before {
+  transform: rotate(180deg);
+}
+.breadcrumb .sub-depth + .sub-depth {
+  border-right: 1px solid var(--color-border-layout);
+}
+.breadcrumb .sub-depth.active .select-box {
+  display: block;
+}
+.breadcrumb .select-box {
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: -1px;
+  width: calc(100% + 2px);
+  padding: 6px 0;
+  border: 1px solid var(--color-border-layout);
+  background-color: #fff;
+}
+.breadcrumb .select-box li {
+  padding: 15px 0 14px 20px;
+  font-size: 18px;
+  line-height: 1.17;
+  color: #666;
+  cursor: pointer;
+}
+.breadcrumb .select-box li:hover {
+  font-weight: 700;
+}
+/* ==========================================================================
+   sub - top-content 
+   ========================================================================== */
+.sub-wrap .top-content {
+  padding: 120px 0 180px;
+}
+.sub-wrap .content .title {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.56px;
+  text-align: center;
+  color: #111;
+}
+
+/* ==========================================================================
+   sub - checkbox
+   ========================================================================== */
+.sub-wrap .check-box input {
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  margin: 0;
+  margin-right: 12px;
+  background: url("../images/icon/check-default.png") no-repeat center center /
+    100% 100%;
+  vertical-align: middle;
+}
+.sub-wrap .check-box input:checked {
+  background-image: url("../images/icon/check-on.png");
+}
+.sub-wrap .check-box label {
+  vertical-align: middle;
+}

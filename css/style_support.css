@@ -1,0 +1,248 @@
+@charset "UTF-8";
+
+/* ==========================================================================
+   sub - support-wrap
+   ========================================================================== */
+.sub-wrap .top-content {
+  padding-bottom: 100px;
+}
+.sub-wrap .top-content .desc-title {
+  margin-top: 32px;
+  font-size: 22px;
+  line-height: 1.55;
+  letter-spacing: -0.22px;
+  color: #333;
+}
+
+/* ==========================================================================
+   sub - notice / tech-inquiry
+   ========================================================================== */
+.tech-inquiry .notice .title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 0.89;
+  text-align: left;
+  color: #111;
+}
+.tech-inquiry .notice .detail-box {
+  margin-top: 40px;
+  padding: 30px;
+  border-radius: 8px;
+  background-color: #f6f6f6;
+}
+.tech-inquiry .notice .detail-title {
+  font-size: 22px;
+  line-height: 1.45;
+  color: #333;
+}
+.tech-inquiry .notice .notice-list {
+  margin-top: 20px;
+}
+.tech-inquiry .notice-list li {
+  font-size: 22px;
+  line-height: 1.45;
+  color: #333;
+}
+.tech-inquiry .notice-list li + li {
+  margin-top: 20px;
+}
+.tech-inquiry .notice-list span {
+  position: relative;
+  padding-left: 16px;
+}
+.tech-inquiry .notice-list span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  background-color: #333;
+}
+.tech-inquiry .notice-list p {
+  margin-top: 10px;
+  text-indent: 16px;
+}
+.tech-inquiry .notice .check-box {
+  margin-top: 40px;
+  text-align: right;
+  font-size: 22px;
+  line-height: 1.45;
+  color: #333;
+}
+.tech-inquiry .notice .check-box span + span {
+  margin-left: 40px;
+}
+.tech-inquiry .check-box label {
+  vertical-align: middle;
+}
+.tech-inquiry .form-content {
+  margin-top: 100px;
+  padding-bottom: 180px;
+}
+.tech-inquiry .form-content .title {
+  padding-bottom: 40px;
+  border-bottom: 2px solid #111;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 0.89;
+  text-align: left;
+  color: #111;
+}
+.tech-inquiry .form-container {
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--color-border-layout);
+}
+.tech-inquiry .form-content .form-group {
+  margin-top: 40px;
+}
+.tech-inquiry .form-content .label-text {
+  display: block;
+  margin-bottom: 16px;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.18;
+  color: #111;
+}
+.tech-inquiry .form-content .require-mark {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 28px;
+  font-weight: 500;
+  color: #f46700;
+  vertical-align: middle;
+}
+.tech-inquiry .form-content .radio-box {
+  margin-top: 40px;
+  font-size: 22px;
+  line-height: 1.45;
+  color: #333;
+}
+.tech-inquiry .form-content .radio-box + .radio-box {
+  margin-left: 40px;
+}
+.tech-inquiry .form-group input,
+.tech-inquiry .form-group textarea {
+  width: 748px;
+  padding: 19px 20px;
+  border: none;
+  outline: none;
+  font-size: 22px;
+  line-height: 1.18;
+  color: #333;
+}
+.tech-inquiry .form-group input::placeholder {
+  color: #b5b5b5;
+}
+.tech-inquiry .form-group:not(.radio-category) input {
+  border: 1px solid var(--color-border-box);
+  border-radius: 4px;
+}
+.tech-inquiry .form-group:not(.radio-category) input:disabled {
+  background-color: #f2f2f2;
+}
+.tech-inquiry .form-group.radio-category input {
+  width: 28px;
+  padding: 0;
+  background-image: url("../images/icon/check-default-white.png");
+}
+.tech-inquiry .form-group.radio-category input:disabled {
+  background-image: url("../images/icon/check-default.png");
+}
+.tech-inquiry .form-group.radio-category input:checked {
+  background-image: url("../images/icon/check-on.png");
+}
+.tech-inquiry .form-group.radio-category label {
+  vertical-align: middle;
+}
+.tech-inquiry .form-group.input-contact .input-box {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 13px;
+}
+.tech-inquiry .form-group.input-contact input {
+  width: 198px;
+}
+.tech-inquiry .input-contact .help-text {
+  margin-left: 20px;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #888;
+}
+.tech-inquiry .form-group.input-title input {
+  width: 100%;
+  max-width: 1598px;
+}
+.tech-inquiry .form-group.textarea-content textarea {
+  width: 100%;
+  max-width: 1598px;
+  padding: 20px;
+  height: 318px;
+  border: 1px solid var(--color-border-box);
+  outline: none;
+  resize: none;
+}
+.tech-inquiry .form-group.textarea-content textarea:disabled {
+  background-color: #f2f2f2;
+}
+.tech-inquiry .form-group.input-file .input-box {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+.tech-inquiry .form-group.input-file input {
+  display: none;
+}
+.tech-inquiry .form-group.input-file input:disabled + label {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.18;
+  color: #888;
+  background-color: #ccc;
+  border-color: #ccc;
+}
+.tech-inquiry .input-file .file-list {
+  display: block;
+  width: 640px;
+  height: 64px;
+  padding: 16px 20px;
+  font-size: 22px;
+  line-height: 1.18;
+  color: #111;
+  border: 1px solid var(--color-border-box);
+}
+.tech-inquiry .input-file .file-item .btn-delete-file {
+  width: 32px;
+  height: 32px;
+  background: url("../images/icon/icon-delete.png") no-repeat center center /
+    100% 100%;
+}
+.tech-inquiry .form-group.input-file label {
+  padding: 18px 29px;
+  font-size: 22px;
+  color: #333;
+  line-height: 1.18;
+  border-radius: 4px;
+  border: 1px solid #333;
+}
+.tech-inquiry .btn-box {
+  margin-top: 100px;
+  text-align: center;
+}
+.tech-inquiry .btn-box button {
+  width: 220px;
+  height: 72px;
+  font-size: 24px;
+  line-height: 1.21;
+  text-align: center;
+  color: #333;
+  border: 1px solid #666;
+  border-radius: 999px;
+}
+.tech-inquiry .btn-box .btn-complete {
+  margin-left: 20px;
+  color: #fff;
+  border: 1px solid var(--color-primary);
+  background-color: var(--color-primary);
+}
